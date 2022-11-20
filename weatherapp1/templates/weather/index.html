@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep's weather portal</title>
+    <!-- import boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<!-- set background as image.jpeg -->
+
+<body
+    style="background-image: url('{%static 'images/image.jpg'%}');; background-repeat: no-repeat; background-size: cover;">
+    <!-- Weather app -->
+    <!-- give background pleasant cloud texture -->
+    <div class="container-fluid">
+
+        <!-- Display "weather" in a flashy manner -->
+        <div class="container" style="padding-top: 100px;">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <h1 class="display-1 text-center">Weather</h1>
+                </div>
+
+            </div>
+            <br><br>
+            <table class="table table-striped" style="padding-top: 100px;">
+                <thead>
+                    <tr>
+                        <th scope="col">S no.</th>
+                        <th scope="col">City Name</th>
+                        <th scope="col">Temperature</th>
+                        <th scope="col">Wind</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Pressure</th>
+                        <th scope ="col">Feels Like</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Pune</td>
+                        <td>{{ weather.temperature }}</td>
+                        <td>{{ weather.wind }}</td>
+                        <td>{{ weather.description }}</td>
+                        <td>{{ weather.pressure }}</td>
+                        <td>{{ weather.feels_like }}</td>
+                        
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <!-- temperature -->
+                        <td>Mumbai</td>
+                        <td>{{ weather1.temperature }}</td>
+                        <td>{{ weather1.wind }}</td>
+                        <td>{{ weather1.description }}</td>
+                        <td>{{ weather1.pressure }}</td>
+                        <td>{{ weather1.feels_like }}</td>
+                        
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Delhi</td>
+                        <td>{{ weather3.temperature }}</td>
+                        <td>{{ weather3.wind }}</td>
+                        <td>{{ weather3.description }}</td>
+                        <td>{{ weather3.pressure }}</td>
+                        <td>{{ weather3.feels_like }}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
