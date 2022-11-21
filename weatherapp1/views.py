@@ -35,7 +35,7 @@ def index(request):
         'description': city_weather2['weather'][0]['description'],
         'icon': city_weather2['weather'][0]['icon'],
         'humidity': city_weather2['main']['humidity'],
-        "feels_like": city_weather['main']['feels_like'],
+        "feels_like": city_weather2['main']['feels_like'],
         'wind': city_weather2['wind']['speed'],
         'pressure': city_weather2['main']['pressure']
 
@@ -48,12 +48,14 @@ def index(request):
         'description': city_weather3['weather'][0]['description'],
         'icon': city_weather3['weather'][0]['icon'],
         'humidity': city_weather3['main']['humidity'],
-        "feels_like": city_weather['main']['feels_like'],
+        "feels_like": city_weather3['main']['feels_like'],
         'wind': city_weather3['wind']['speed'],
         'pressure': city_weather3['main']['pressure']
     }
-    print(weather1)
-    print(weather3)
+    print("********************")
+    print(city_weather2)
+    print("********************")
+    print(city_weather3)
     context = {'weather': weather, 'weather1': weather1,'weather3': weather3}
     # returns the index.html template
     return render(request, 'weather/index.html', context)

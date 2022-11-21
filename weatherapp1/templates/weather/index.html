@@ -40,38 +40,48 @@
                         <th scope="col">Description</th>
                         <th scope="col">Pressure</th>
                         <th scope ="col">Feels Like</th>
+                        <th scope="col">Icon</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
                         <td>Pune</td>
-                        <td>{{ weather.temperature }}</td>
+                        <td>{{ weather.temperature}} F</td>
                         <td>{{ weather.wind }}</td>
                         <td>{{ weather.description }}</td>
                         <td>{{ weather.pressure }}</td>
                         <td>{{ weather.feels_like }}</td>
+                        <td> <figure class="image is-40x40">
+                            <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+                        </figure></td>
                         
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <!-- temperature -->
                         <td>Mumbai</td>
-                        <td>{{ weather1.temperature }}</td>
+                        <td>{{ weather1.temperature}} F</td>
                         <td>{{ weather1.wind }}</td>
                         <td>{{ weather1.description }}</td>
                         <td>{{ weather1.pressure }}</td>
                         <td>{{ weather1.feels_like }}</td>
+                        <td> <figure class="image is-40x40">
+                            <img src="http://openweathermap.org/img/w/{{ weather1.icon }}.png" alt="Image">
+                        </figure></td>
                         
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Delhi</td>
-                        <td>{{ weather3.temperature }}</td>
+                        <td>{{ weather3.temperature}} F</td>
                         <td>{{ weather3.wind }}</td>
                         <td>{{ weather3.description }}</td>
                         <td>{{ weather3.pressure }}</td>
                         <td>{{ weather3.feels_like }}</td>
+                        <td> <figure class="image is-40x40">
+                            <img src="http://openweathermap.org/img/w/{{ weather3.icon }}.png" alt="Image">
+                        </figure></td>
                         
                     </tr>
                 </tbody>
